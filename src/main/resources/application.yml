@@ -1,0 +1,20 @@
+server:
+  port: 80
+
+#thymeleaf配置
+#模板的模式，支持如：HTML、XML、TEXT、JAVASCRIPT等
+spring:
+  thymeleaf:
+    mode: HTML5
+    #编码，可不用配置
+    encoding: UTF-8
+    #开发配置为false，避免修改模板还要重启服务器
+    cache: false
+    #配置模板路径，默认就是templates，可不用配置
+    prefix: classpath:/templates/
+  servlet:
+    multipart:
+      # 上传文件总的最大值
+      max-request-size: 10MB
+      # 单个文件的最大值
+      max-file-size: 10MB
